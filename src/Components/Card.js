@@ -1,62 +1,44 @@
 import React from "react";
-import './Card.css'
+import "./Card.css";
 
-export default function Card() {
+export default function Card(props) {
   return (
-    <div>
-      <h1 className="text-center text-danger text-capitalize my-5">
-        Course Cards Are Here !!!
-      </h1>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <img class="card-img-top" src="https://picsum.photos/200/301" alt="Image_over_here" />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a class="btn btn-primary" href="#">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
+    <div className="card">
+      <div className=" card-container">
+        <div className="image-container">
+          <img src={props.img} alt={props.name} />
+        </div>
+        <div className="card-content">
+          <div className="card-title">
+            <h3>{props.name}</h3>
           </div>
-          
-          <div class="col">
-            <div class="card">
-              <img src="https://picsum.photos/200/300" class="card-img-top" alt="ime" />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
+          <div className="card-body">
+            <p>{props.position}</p>
           </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="card-link">
-                  Card link
-                </a>
-                <a href="#" class="card-link">
-                  Another link
-                </a>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="btn">
+          <button>
+            <a href={props.linkedin}>View LinkedIn</a>
+          </button>
         </div>
       </div>
     </div>
+
+    // <div class="container text-center">
+    //   <div class="row">
+    //       <div class="card">
+    //         <img class="card-img-top" src={props.img} alt={props.name} />
+    //         <div class="card-body">
+    //           <h5 class="card-title">{props.name}</h5>
+    //           <p class="card-text">
+    //             {props.position}
+    //           </p>
+    //           <a class="btn btn-primary" href={props.linkedin}>
+    //             linkedin logo
+    //           </a>
+    //         </div>
+    //       </div>
+    //     </div>
+    // </div>
   );
 }
