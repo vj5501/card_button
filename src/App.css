@@ -11,10 +11,12 @@ body {
   color: rgb(222, 217, 217);
 }
 .div{
-  /* width: 100px; */
-  /* background-color: black; */
   display: flex;
   justify-content: space-between;
   padding: -17px;
-  margin: 2px;
+  margin: 20px;
+}
+.but{
+  display: flex;  
+  justify-content: space-between ;
 }
